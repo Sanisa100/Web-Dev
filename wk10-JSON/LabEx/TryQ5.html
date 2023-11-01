@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLabQ5</title>
+    <script>
+        //  total number of book orders
+        var bookCount = 0;
+        function addBook()
+        {
+            //  get the order details
+            var titleTf = document.getElementById("titleInput");
+            var title = titleTf.value;
+
+            var codeTf = document.getElementById("codeInput");
+            var code = codeTf.value;
+
+            var quantityTf = document.getElementById("quantityInput");
+            var quantity = Number(quantityTf.value);
+
+            var orderInfo = code + ": " + title + " X " + quantity;
+
+            //  update number of book 
+            bookCount = bookCount + quantity;
+           
+            //  create a new list item holding the order info
+            var li = document.createElement("li");
+            var orderText = document.createTextNode(orderInfo);
+            li.appendChild(orderText);
+
+            //  add the new list item element to the unordered list
+            var orderUL = document.getElementById("bookList");
+            orderUL.appendChild(li);
+
+            //  display the number of book orders
+            var bookCountSpan = document.getElementById("bookCountHolder");
+            bookCountSpan.innerHTML = "Total number of book ordered: " + bookCount;
+        }
+    </script>
+</head>
+<body>
+    Enter book title: <input type="text" id="titleInput"/>
+    <br/>
+    Enter product code: <input type="text" id="codeInput"/>
+    <br/>
+    Enter quantity: <input type="text" id="quantityInput"/>
+    <br/>
+    <button onclick="addBook()">Add to order</button>
+    <ul id="bookList"></ul>
+   
+    <span id="bookCountHolder"></span>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLabQ4</title>
+    <script>
+        function readJson()
+    {   
+        //  get the JSON from the text area
+        var jsonTextarea = document.getElementById("jsonInput");
+        var subjectJson = jsonTextarea.value;
+
+        //  translate the JSON to object
+        var subjectObj = JSON.parse(subjectJson);
+
+        //  display the subject code
+        var subCode = document.getElementById("codeDisplay");
+         subCode.value = subjectObj.code; 
+
+        //  display the subject title
+        var subTitle = document.getElementById("titleDisplay");
+            subTitle.value = subjectObj.title;
+
+        //  display the subject credit point
+        var subCp = document.getElementById("cpDisplay");
+            subCp.value = subjectObj.cp;
+
+        //  display the core subject
+        var subCore = document.getElementById("coreDisplay");
+            subCore.checked = subjectObj.coreFlag;
+    }
+    </script>
+</head>
+<body>
+    <textarea id="jsonInput" cols="50" rows="7"></textarea>
+    <br/>
+    <button onclick="readJson()">Read JSON</button>
+    <br/>
+    Subject code: <input type="text" id="codeDisplay"/>
+    <br/>
+    Subject title: <input type="text" id="titleDisplay"/>
+    <br/>
+    Subject credit point: <input type="text" id="cpDisplay"/>
+    <br/>
+    Core subject: <input type="checkbox" id="coreDisplay"/>
+    <br/><br/>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Question 5</title>
+  <script>
+     // total number of books ordered
+      var bookCount = 0;
+      function addBook()
+      {
+        // get order details
+        var titleTf = document.getElementById("titleInput");
+        var title = titleTf.value;
+        
+        var codeTf = document.getElementById("codeInput");
+        var code = codeTf.value;
+
+        var quantityTf = document.getElementById("quantityInput");
+        var quantity = Number(quantityTf.value);
+
+        var orderInfo = code + ": " + title + " x " + quantity;
+        
+        // update number of books
+        bookCount = bookCount + quantity;
+        
+        // create a new list item holding the order info
+        var li = document.createElement("li");
+        var orderText = document.createTextNode(orderInfo);
+        li.appendChild(orderText);
+
+        // add the new list item element to the unordered list
+        var orderUL = document.getElementById("bookList");
+        orderUL.appendChild(li);
+        
+        // display number of books ordered
+        var bookCountSpan = document.getElementById("bookCountHolder");
+        bookCountSpan.innerHTML = "Total number of books ordered: " + bookCount;
+      
+      }
+  </script>
+  </head>
+  <body>
+   Enter book title: <input type="text" id="titleInput"/>
+   <br/>
+   Enter product code: <input type="text" id="codeInput"/>
+   <br/>
+   Enter quantity: <input type="text" id="quantityInput"/>
+   <br/>
+   <button onclick="addBook();">Add to order</button>
+   
+    <ul id="bookList">
+    </ul>
+    
+    <span id="bookCountHolder"></span>
+	  
+	 
+	  
+	
+  </body>
+</html>

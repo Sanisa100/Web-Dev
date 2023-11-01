@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLabQ3</title>
+    <script>
+        function showJson()
+    {
+        //  get the subject code
+        var subCode = document.getElementById("codeInput");
+        var subjectCode = subCode.value; 
+
+        //  get the subject title
+        var subTitle = document.getElementById("titleInput");
+        var subjectTitle = subTitle.value;
+
+        //  get the subject credit point
+        var subCp = document.getElementById("cpInput");
+        var subjectCp = Number(subCp.value);
+
+        //  get the core subject
+        var subCore = document.getElementById("coreInput");
+        var subjectCore = subCore.checked;
+
+        //  construct the subject object
+        var subjectObj = {};
+            subjectObj.code = subjectCode;
+            subjectObj.title = subjectTitle;
+            subjectObj.cp = subjectCp;
+            subjectObj.coreFlag = subjectCore;
+
+        //  translate the object to JSON
+        var subjectJson = JSON.stringify(subjectObj, null, 2);
+
+        //  display the JSON in the text area
+        var textArea = document.getElementById("display");
+        textArea.innerHTML = subjectJson;
+    }
+    </script>
+</head>
+<body>
+    Subject code: <input type="text" id="codeInput"/>
+    <br/>
+    Subject title: <input type="text" id="titleInput"/>
+    <br/>
+    Subject credit point: <input type="text" id="cpInput"/>
+    <br/>
+    Core subject: <input type="checkbox" id="coreInput"/>
+    <br/><br/>
+    <button onclick="showJson()">View JSON</button>
+    <br/>
+    <textarea id="display" cols="30" rows="10"></textarea>
+    <br/>
+</body>
+</html>
