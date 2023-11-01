@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<title>Task2.html</title>
+	
+	<script>
+
+	function displayStudentNumber()
+	{	
+		var studentNumberSpan = document.getElementById("result");
+		studentNumberSpan.value = "7654376";
+	}
+	
+	function displayFullName()
+	{
+		var fullNameSpan = document.getElementById("result");
+		fullNameSpan.value = "Sanisa Trakulmututa";
+	}
+	
+	function clearField()
+	{
+		var clearTextField = document.getElementById("result");
+		clearTextField.value = "";
+	}
+	
+	
+	
+	
+	</script>
+	
+	</head>
+	
+	<body>
+	
+	<input type = "text" id = "result" /> 
+	</br></br>
+	<span style="color: red" onMouseOver = "displayFullName()" >Show full name</span>
+	</br></br>
+	<span style ="color: green" onMouseOver = "displayStudentNumber()" >Show student number</span>
+	</br></br>
+	<span style = "color: orange" onMouseOver = "clearField()">Clear</span>
+	
+	</body>
+</html>

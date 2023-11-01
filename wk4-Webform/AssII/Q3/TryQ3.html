@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+    <script>
+            var emojiCount = 0;
+        function addEmoji()
+        {
+
+            emojiCount++;
+
+            if (emojiCount %2 == 0)
+            {
+            var emojiSpan = document.getElementById("emojiHolder");
+            emojiSpan.innerHTML += "😊"
+            }
+            else 
+            {
+            var emojiSpan = document.getElementById("emojiHolder");
+            emojiSpan.innerHTML += "🌸"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="addEmoji();">Add emoji</button>
+    <br/>
+    <span id="emojiHolder"></span>
+    
+</body>
+</html>

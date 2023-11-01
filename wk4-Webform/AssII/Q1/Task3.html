@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Task3.html</title>
+	<script>
+		var flowerEmoji = "🌸";
+		var smilingEmoji = "😊";
+		var countClick = 0;
+	
+		function addEmoji()
+		{
+			var addEmojiSpan = document.getElementById("emojiHolder");
+			
+			countClick++;
+
+			// countClick = countClick + 1;
+			if(countClick %2 == 0) 
+				// even number
+			{
+				// advanced syntax
+				addEmojiSpan.innerHTML += smilingEmoji;
+				// basic syntax
+				// addEmojiSpan.innerHTML = addEmojiSpan.innerHTML + smilingEmoji;
+			}else{
+				// odd number
+				addEmojiSpan.innerHTML += flowerEmoji;
+				// addEmojiSpan.innerHTML = addEmojiSpan.innerHTML + flowerEmoji;
+			}
+		
+		// if countClick(even)  
+		// {
+		// addEmojiSpan.innerHTML = smilingEmoji;
+		// }
+		
+		// if countClick(odd)  
+		// {
+		// addEmojiSpan.innerHTML = flowerEmoji;
+		// }
+		}	
+	
+	</script>
+	</head>
+	
+	<body>
+		<button onClick="addEmoji()" id = "emojiDisplay">Add emoji</button>
+		
+		<span id = "emojiHolder" ></span>
+	</body>
+	
+	
+
+</html>

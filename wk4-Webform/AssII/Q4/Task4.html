@@ -1,0 +1,53 @@
+<html>
+
+	<head>
+		<title>Assignment2-Q1: webpage Task4</title>
+		
+		<script>
+
+		function changePic1() {
+
+		}
+
+		function changePic2() {
+			var img1 = document.getElementById("img1");
+			var img2 = document.getElementById("img2");
+			var temp = img1.src;
+			img1.src = img2.src;
+			img2.src = temp;
+		}
+
+		function changePic3() {
+			var img1 = document.getElementById("img1");
+			var img2 = document.getElementById("img2");
+			var img3 = document.getElementById("img3");
+			var temp = img1.src;
+			img1.src = img3.src;
+			img3.src = img2.src;
+			img2.src = temp;
+
+
+			// //img2
+			// //a,b,c
+			// temp
+			// // step 1
+			// temp = a
+			// // step 2
+			// a = b
+			// // step 3
+			// b = c
+			// // step 4
+			// c = temp
+		}
+		
+		</script>
+	</head>
+	
+	<body>
+		<img id ="img1" onClick="changePic1();" src ="FullName.png" height ="150px"/>
+		<img id ="img2" onClick="changePic2();" src ="StudentNumber.png" height ="150px"/>
+		<img id ="img3" onClick="changePic3();" src = "Course.png" height ="150px"/>
+	
+	</body>
+	
+</html>

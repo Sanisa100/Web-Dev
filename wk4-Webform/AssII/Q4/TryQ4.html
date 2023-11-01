@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function swipeImage1()
+        {
+
+
+        }
+
+        function swipeImage2()
+        {
+            var image1 = document.getElementById("image1");
+            var image2 = document.getElementById("image2");
+            var temp = image1.src;
+            image1.src = image2.src;
+            image2.src = temp
+        }
+
+        function swipeImage3()
+        {
+            var image1 = document.getElementById("image1");
+            var image2 = document.getElementById("image2");
+            var image3  = document.getElementById("image3");
+            var temp = image1.src;
+            image1.src = image3.src;
+            image3.src = image2.src;
+            image2.src = temp;
+
+        }
+
+    </script>
+</head>
+<body>
+    <img src="FullName.png" width="150px" onclick="swipeImage1();" id="image1"/>
+    <img src="StudentNumber.png" width="150px" onclick="swipeImage2();"  id="image2"/>
+    <img src="Course.png" width="150px" onclick="swipeImage3();"  id="image3"/>
+    
+</body>
+</html>

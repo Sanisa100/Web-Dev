@@ -1,0 +1,74 @@
+kangaroo 
+all categories
+
+https://www.ebay.com.au/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=Kangaroo&_sacat=0
+
+https://www.ebay.com.au/sch/i.html?
+_from=R40
+
+&
+_trksid=p2380057.m570.l1313
+
+&
+_nkw=Kangaroo
+
+&
+_sacat=0
+
+action of the form:
+https://www.ebay.com.au/sch/i.html?
+
+parameter for the keyword
+_nkw
+
+value for the categories:
+All categories = 0
+Coins = 11116
+Art = 550
+Book & Magazines = 267
+Stamps = 260
+Music = 11233
+--------------------------------------
+search for kangaroo 
+categories: coins
+
+https://www.ebay.com.au/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=Kangaroo&_sacat=11116&LH_TitleDesc=0
+
+https://www.ebay.com.au/sch/i.html?
+_from=R40
+
+&
+_trksid=p2334524.m570.l1313
+
+&
+_nkw=Kangaroo
+
+&
+_sacat=11116
+
+&
+LH_TitleDesc=0
+
+----------------------------------------
+search for kangaroo 
+categories: art
+
+https://www.ebay.com.au/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=Kangaroo&_sacat=550&LH_TitleDesc=0
+
+----------------------------------------
+search for kangaroo 
+categories: book & magazines
+
+https://www.ebay.com.au/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=Kangaroo&_sacat=267&LH_TitleDesc=0
+
+----------------------------------------
+search for kangaroo 
+categories: stamps
+
+https://www.ebay.com.au/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=Kangaroo&_sacat=260&LH_TitleDesc=0
+
+----------------------------------------
+search for kangaroo 
+categories: music
+
+https://www.ebay.com.au/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=Kangaroo&_sacat=11233&LH_TitleDesc=0

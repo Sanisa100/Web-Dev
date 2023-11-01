@@ -1,0 +1,46 @@
+<html>
+
+	<head>
+	</head>
+		<title>Task1.html</title>
+		
+		<script>
+		function decreseTen()
+			{
+			var number = document.getElementById('countHolder');
+			number.innerHTML = Number(number.innerHTML) - 10;
+			}
+			
+			
+		function increaseFive()
+		  {
+			var number = document.getElementById('countHolder');
+
+			number.innerHTML = Number(number.innerHTML) + 5;
+			}
+		  
+	
+		function resetPage()
+		  {
+			//  clear number
+			var numberSpan = document.getElementById("countHolder");
+			numberSpan.innerHTML = "7654376";
+		  }
+		
+		</script>
+		
+	<body>
+		<p onClick ="decreseTen()";> &#x1F438 </p>
+		<img src ="dog.png" height ="100px" onClick ="increaseFive();" />
+		<br/><br/>
+		<button onClick = "resetPage()";>Reset</button>
+		
+		<br/><br/>
+		
+		Student number:
+		
+		<span id ="countHolder"> 7654376 </span>
+	
+	</body>
+
+</html>

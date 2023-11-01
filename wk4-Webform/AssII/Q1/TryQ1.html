@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <script>
+
+        function decrease10() 
+        {
+          var emojiSpan = document.getElementById("numberHolder");
+          emojiSpan.innerHTML = Number(emojiSpan.innerHTML) - 10;
+        }
+
+        function increase5()
+        {
+           var picSpan = document.getElementById("numberHolder");
+           picSpan.innerHTML = Number(picSpan.innerHTML) + 5;
+        }
+
+        function resetPage()
+        {
+            var resetSpan = document.getElementById("numberHolder");
+            resetSpan.innerHTML = "7654376";
+        }
+
+    </script>
+</head>
+<body>
+    <span onclick="decrease10();">🐸</span>
+    <br/>
+    <img src="dog.png" width="150px" onclick="increase5();"/>
+    <br/>
+    <button type="reset" onclick="resetPage();">Reset</button>
+    <br/>
+    <span id = numberHolder>7654376</span>
+</body>
+</html>

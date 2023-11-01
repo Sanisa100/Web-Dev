@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <script>
+        function showFullName()
+        {
+            var fullName = document.getElementById("textField");
+            fullName.value = "Sanisa Trakulmututa";
+        }
+
+        function showStudentNumber()
+        {
+            var studentNumber = document.getElementById("textField");
+            studentNumber.value = "7654376";
+        }
+
+        function clearText()
+        {
+            var clearField = document.getElementById("textField");
+            clearField.value = "";
+        }
+
+    </script>
+
+</head>
+<body>
+    <input type="text" id="textField">
+    <br/>
+    <span style="color: red;" onmouseover="showFullName();">Show full name</span>
+    <br/>
+    <span style="color: green;" onmousemove="showStudentNumber();" >Show student number</span>
+    <br/>
+    <span style="color: orange;" onmouseover="clearText();">Clear</span>
+    <br/>
+</body>
+</html>
