@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLabQ2</title>
+        <script>
+            function showResult()
+            {
+                //  get the element from the textField1
+                var TF1 = document.getElementById("textField1");
+                var TF1Field = Number(TF1.value);
+
+                //  get the element from the textField2
+                var TF2 = document.getElementById("textField2");
+                var TF2Field = Number(TF2.value);
+
+                //  get the element from the selectOperation
+                var operation = document.getElementById("operationSelected");
+                var operationSelection = operation.value;
+
+                //  establish the conditional calculation
+                var realAnswer
+                if (operationSelection == "addition")
+                {
+                   realAnswer = TF1Field + TF2Field;   
+                }
+                else if (operationSelection == "subtraction")
+                {
+                    realAnswer = TF1Field - TF2Field;
+                }
+                else 
+                {
+                    realAnswer = TF1Field * TF2Field;
+                }
+
+                //  get the user's answer from the textField
+                var userAnswer = document.getElementById("answer");
+                var userAnswerTF = Number(userAnswer.value);
+
+                //  establish checking condition
+                var checkCondition = document.getElementById("status");
+                var statusResult = checkCondition.innerHTML;
+
+                if (realAnswer == userAnswerTF)
+                {
+                    checkCondition.innerHTML = "Corrected!";
+                }
+                else 
+                {
+                    checkCondition.innerHTML = "Incorrected, please try again.";
+                }
+            }
+       </script>
+</head>
+<body>
+    <input type="text" size="5" id="textField1"/>
+    <select id="operationSelected">
+        <option value="addition">+</option>
+        <option value="subtraction">-</option>
+        <option value="multiplication">x</option>
+    </select>
+    
+    <input type="text" size="5" id="textField2"/>
+
+    =
+
+    <input type="text" size="5" id="answer"/>
+    
+    <button onclick="showResult();">Check</button>
+
+    <span id = "status"></span>
+
+    
+</body>
+</html>

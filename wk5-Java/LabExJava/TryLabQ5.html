@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLabQ5</title>
+</head>
+    <script>
+        var imageList = [
+            "sun.png",
+            "moon.png",
+            "lover.png",
+            "world.png",
+            "star.png",
+            "emperor.png",
+        ];
+        var animation = false;
+        var imageAnimation; 
+        function showImage() 
+        {
+            //  get the index of the image
+                var index = Math.floor(Math.random() * imageList.length);
+
+            //  show the image
+                var imageElement = document.getElementById("showImage");
+                imageElement.src = imageList[index];
+        }
+
+        function startShow() 
+        {
+            if (animation == false) 
+            {
+                animation = true;
+                imageAnimation = setInterval(showImage, 1000);
+            }
+        }
+        function stopShow() 
+        {   
+            if (animation == true)
+            {
+                animation = false;
+                clearInterval(imageAnimation);
+            }
+        }
+
+    </script>
+<body>
+    <button onclick="startShow()">Start Slideshow</button>
+    <button onclick="stopShow()">Stop Slideshow</button>
+    <br/><br/>
+    <img id="showImage" height="250px"/>
+</body>
+</html>

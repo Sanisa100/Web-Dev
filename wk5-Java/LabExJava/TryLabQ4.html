@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLabQ4</title>
+    <script>
+        var countHolder = 0;
+        var animation = false;
+        var counterAnimation;
+        function updateCounter()
+        {
+           //  update counter
+           countHolder++;
+
+           //  show counter value
+           var counterSpan = document.getElementById("countHolder");
+           counterSpan.innerHTML = countHolder;
+        }
+
+        function startAnimation()
+        {
+            if (animation == false)
+            {
+                animation = true;
+                counterAnimation = setInterval(updateCounter, 1000);
+            }
+
+        }
+
+        function stopAnimation()
+        {
+           if (animation == true)
+           {
+                animation = false;
+                clearInterval(counterAnimation);
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="startAnimation();">Start counter animation</button>
+    <button onclick="stopAnimation();">Stop counter animation</button>
+    <br /><br />
+    <span id="countHolder">0</span>
+    
+</body>
+</html>

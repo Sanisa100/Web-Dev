@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>LabWk6Q5</title>
+    
+    <script>
+      var slideshowAnimation;
+      
+      function startAnimation()
+      {
+        // start the slideshow animation
+        slideshowAnimation = setInterval(showImage, 1000);
+      }
+      
+      // list of images for the slideshow animation
+      var IMAGE_LIST = [
+        "moon.png",
+        "sun.png",
+        "star.png",
+        "lover.png",
+        "emperor.png",
+        "world.png"
+      ];
+      
+      function showImage()
+      {
+        // get a random image index
+        var index = Math.floor(Math.random() * IMAGE_LIST.length);
+ 
+        // show the image
+        var imgElement = document.getElementById("imageHolder");
+        imgElement.src = IMAGE_LIST[index];
+      }
+      
+      function stopAnimation()
+      {
+        clearInterval(slideshowAnimation);
+      }
+    </script>
+  </head>
+  
+  <body>
+  
+    <button onClick="startAnimation()">
+      Start Slideshow
+    </button>
+    <button onClick="stopAnimation()">
+      Stop Slideshow
+    </button>
+    <br /><br />
+
+    <img id="imageHolder" height="250px" />
+    
+  </body>
+</html>
