@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage eaxample</title>
+
+    <script>
+        function validateJson()
+        {
+            // get the json text from textarea
+            var jsonTextarea = document.getElementById("jsonInput");
+            var jsonText = jsonTextarea.value;
+
+            // parse the json text
+            try
+            {
+            JSON.parse(jsonText);
+            alert("JSON is all good!");
+            }
+            catch(ex)
+            {
+                alert("there is an error");
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter JSON to validate:
+    <br />
+
+    <textarea id="jsonInput" rows="10" cols="50"></textarea><br />
+    <button onClick="validateJson">Validate JSON</button>
+    <span id="messageDisplay"></span>
+
+</body>
+</html>
