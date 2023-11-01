@@ -1,0 +1,15 @@
+<html>
+	<head>
+	<title>Welcome to Web Tech</title>
+	</head>
+	
+	<body>
+	
+		<h1>Intro to Web Tech</h1>
+		
+		<b>Name:</b> Miss Moewina van cat <br/>
+		<b>Email:</b> cat@gmail.com <br/>
+		<b>Website:</b> <a href="http://facebook.com" target="_blank">Cat Website</a>
+	
+	</body>
+</html>
