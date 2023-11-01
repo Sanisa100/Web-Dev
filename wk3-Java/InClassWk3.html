@@ -1,0 +1,117 @@
+<html>
+	
+	<head>
+		<title>javascript</title>
+		
+		<script>
+			function doSillyThing()
+			{
+			alert(4); 
+			alert(10); 
+			console.log(50);
+			alert('hello'); 
+			console.log('how are you?');
+			}
+			
+			function moreSilly()
+			{
+			// get the h1 element
+			var e = document.getElementByID("welcome");
+			
+			// change the h1 element
+			e.innerHTML = "How are you?";
+			}
+			
+			function goEmu()
+			{
+				//get the input element
+				var e = document.getElementById("textBox");
+				
+				//change the div element
+				e.value = "<b>knock knock knock!!!>";
+			}
+			function goFrog()
+			{
+				//get the div element
+				var e = document.getElementById("emuFrog");
+				
+				//change the dov element
+				e.innerHTML = "<i style= "color:green;">rbit rbit rbit</i>";
+			}
+			
+			function showShark()
+			{
+			// get the image element
+			var e= document.getElementByID("animal")
+			// change the image element 
+			e.src = "shark.png";
+			} 
+			
+			function showElephant()
+			{
+			// get
+			var e= document.getElementByID("animal")
+			// change 
+			e.src = "elephant.png";
+			} 
+			function getDate()
+			{
+			//get the current date
+			var now = new Date();
+			
+			alert(now);
+			//find out the day
+			var dayNumber = now.getDay();
+			alert(dayNumber == 0){
+			alert("Today is Sunday");
+			}else if(da)
+			
+			
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+	
+		<h1 id="welcome">Welcome to web tech</h1>
+		<p onClick="moreSilly()">Bah bah black sheep</p>
+		
+		It is called inner html
+		
+		<button onClick="doSillyThing()">
+			Click me
+		</button>
+		
+		<button onClick="goEmu()">
+			Emu
+		</button>
+		<button onClick="goFrog()">
+			Frog
+		</button>
+		
+		<div id="emufrog">
+		</div>
+		
+		<input type="text" id="textBox"></input>
+		
+		<br/>
+		<button onclick="showShark()">
+		shark
+		</button>
+		
+		<button onclick="showElephant()">
+		elephant
+		</button>
+		
+		<br/><br/>
+		<img id="animal" height="200px" />
+		
+		<button onclick="getDate"()>
+		Get me the date!
+		</button>
+		
+		
+	</body>
+
+</html>

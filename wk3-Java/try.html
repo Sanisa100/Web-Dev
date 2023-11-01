@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script>
+        var leftImage = "lion";
+      function swipeImage()
+      {
+        //  get the image
+            var imageLeft = document.getElementById("left");
+            var imageRight = document.getElementById("right");
+
+        
+        //  establish the conditions
+            if (leftImage == "lion")
+            {
+                leftImage  = "frog";
+                imageLeft.src = "frog.png";
+                imageRight.src = "lion.png";
+            }
+            else
+            {
+                leftImage = "lion";
+                imageLeft.src = "lion.png";
+                imageRight.src = "frog.png";
+            }
+      }
+        
+    </script>
+</head>
+ิ<body>
+    Move the mouse over the images
+	<br /><br />
+
+    <img src="lion.png" height="150px" id ="left"
+    onmouseover="swipeImage();"/>
+    <img src="frog.png" height="150px" id="right"
+    onmouseover="swipeImage();"/>
+
+</body>
+</html>
