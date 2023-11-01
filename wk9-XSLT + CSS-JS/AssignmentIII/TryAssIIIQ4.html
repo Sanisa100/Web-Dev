@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryAssIIIQ4</title>
+    <script>
+        var emoji = ["🍌", "🍒", "🍊"];
+        var count = 0;
+        var animation = false;
+        var emojiAnimation;
+
+        function addEmoji()
+        {
+        var result = document.getElementById("emoji");
+        count++;
+        {
+            if (count %3 == 0)
+            {
+                result.innerHTML += "🍊";
+            }
+            else if (count %3 == 1)
+            {
+                result.innerHTML += "🍌";
+            }
+            else if (count %3 == 2)
+            {
+                result.innerHTML += "🍒";
+            }
+            else 
+            { 
+                animation = false;
+                clearInterval(emojiAnimation)
+            }
+        }
+        }
+
+        function startAnimation()
+        {
+            if (animation)
+            endAnimation();
+            {
+                animation = true;
+                setInterval(addEmoji, 1000);
+                var result = document.getElementById("result");
+                result.innerHTML = emoji[0];
+            } 
+        }
+
+        function endAnimation()
+        {
+                animation = false;
+                clearInterval(emojiAnimation);
+                document.getElementById("emoji").innerHTML = "";
+                count = 0;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="startAnimation()">Start animation</button><br/><br/>
+    <button onclick="endAnimation()">End animation</button><br/><br/>
+    <span id="emoji"></span>
+</body>
+</html>

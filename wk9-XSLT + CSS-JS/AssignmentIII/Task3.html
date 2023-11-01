@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryAssIIIQ3</title>
+    <script>
+        var animation = false;
+        var countAnimation;
+        function decreaseOne()
+        {
+            var result = document.getElementById("result");
+            var resultSpan = result.innerHTML;
+            if (resultSpan > 0)
+            {
+                resultSpan--;
+                result.innerHTML = resultSpan;
+            }
+            else
+            {
+                animation = false;
+                clearInterval(countAnimation);
+            }
+        }
+
+        function startAnimation()
+        {   
+            if(animation) {
+                stopAnimation();
+            } 
+            animation = true;
+            countAnimation = setInterval(decreaseOne, 1000);
+            document.getElementById("result").innerHTML = document.getElementById("startNumber").value;
+        }
+
+        function stopAnimation()
+        {
+            animation = false;
+            clearInterval(countAnimation);
+            var result = document.getElementById("result");
+            result.innerHTML = 0;
+        }
+    </script>
+</head>
+<body>
+    Enter the start number: <input type="text" placeholder="Enter the start number" id="startNumber"/>
+    <br/><br/>
+    <button onclick="startAnimation()">Start animation</button>
+    <br/><br/>
+    <span id="result"></span>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryAssIIIQ2</title>
+    <script>
+        
+        var animation = false;
+        var count = 0;
+        var numberAnimation;
+        
+        function updateAnimation()
+        {   
+            //  get the span  element
+                var resultSpan = document.getElementById("result");
+            //  show the result
+                resultSpan.innerHTML = count;
+               
+              
+				if (count % 2 == 0) 
+                {
+					result.style.color = "orange";
+				} 
+                else 
+                {
+					result.style.color = "blue";
+				}
+                count++;
+        }
+
+        function startAnimation()
+        {   
+            if(animation )
+            {
+                stopAnimation();
+            }
+            {
+                animation = true;
+                numberAnimation = setInterval(updateAnimation, 1000);
+            }   
+        }
+
+        function endAnimation()
+        {
+           // if (animation == true)
+            //{
+                animation = false;
+                clearInterval(numberAnimation);
+                result.innerHTML = "";
+			    count = 0;        
+            //}
+        }
+    </script>
+</head>
+<body>
+    <button onclick="startAnimation()">Start animation</button>
+    <button onclick="endAnimation()">End animation</button>
+    <br/><br/>
+    <span id="result"></span>
+</body>
+</html>

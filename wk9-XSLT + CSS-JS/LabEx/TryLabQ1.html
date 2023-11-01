@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLabQ1</title>
+    <style>
+        h1 
+        { 
+        text-align: center;
+        padding: 10px; 
+        }
+
+        h1#uow:hover{transform: scale(2);}
+    </style>
+    <script>
+        function turnColor(colorValue)
+        {
+            var colorHeading = document.getElementById("uow");
+            colorHeading.style.color = colorValue;
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: black;" id = "uow" >University of Wollongong</h1>
+    <br/><br/>
+    <button onclick="turnColor('green')">Green</button>
+    <button onclick="turnColor('orange')">Orange</button>
+    <button onclick="turnColor('blue')">Blue</button>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryAssIIIQ1</title>
+    <style>
+        #studentInfo
+        {
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+    </style>
+    <script>
+        function displayInfo()
+            {
+                var studentNumber = document.getElementById("studentNumber").value;
+                var studentName = document.getElementById("studentName").value;
+                var fontSize = document.getElementById("fontSize").value;
+                var textColor = document.getElementById("textColor").value;
+                var backgroundColor = document.getElementById("backgroundColor").value;
+                
+                var studentInfo  = document.getElementById("studentInfo");
+
+                studentInfo.innerHTML = studentNumber + "<br/>" + studentName;
+                studentInfo.style.fontSize = fontSize + "px";
+                studentInfo.style.color = textColor;
+                studentInfo.style.backgroundColor = backgroundColor;
+                
+            }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>  Enter student number: </td>
+            <td><input type="text" id="studentNumber" placeholder="Enter student number"/></td>
+        </tr>
+        <tr>
+            <td>Enter student name: </td> <td><input type="text" id="studentName" placeholder="Enter student name"/></td>
+        </tr>
+        <tr>
+            <td>Enter font size: </td> <td><input type="text" id="fontSize" placeholder="Enter font size"/>
+        </tr>
+        <tr>
+            <td> Enter text color: </td> <td><input type="text" id="textColor" placeholder="Enter text color"/>
+        </tr>
+        <tr>
+            <td> Enter background color: </td> <td><input type="text" id="backgroundColor" placeholder="Enter background color">
+        </tr>
+        <tr>
+
+    <td><button onclick="displayInfo()">Display student info</button></td>
+        </tr>
+    </table>
+
+    <div id="studentInfo"></div>
+</body>
+</html>

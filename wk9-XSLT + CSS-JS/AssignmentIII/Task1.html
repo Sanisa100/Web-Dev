@@ -1,0 +1,73 @@
+<html>
+  <head>
+	<title>Task1</title>
+	<style>
+		#result {
+			width: 300px;
+			height: 300px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+	</style>
+	<script>
+		function showInfo() {
+			var number = document.getElementById("number").value;
+			var name = document.getElementById("name").value;
+			var fontSize = document.getElementById("fontSize").value;
+			var textColor = document.getElementById("textColor").value;
+			var bgColor = document.getElementById("bgColor").value;
+
+			var infoDiv = document.getElementById("result");
+			infoDiv.innerHTML = number + "<br>" + name;
+			infoDiv.style.fontSize = fontSize + "px";
+			infoDiv.style.color = textColor;
+			infoDiv.style.backgroundColor = bgColor;
+		}
+	</script>
+  </head>
+  <body>
+	<table>
+		<tr>
+			<td>Enter student number </td>
+			<td><input type="text" id="number" placeholder="Student number"></td>
+		</tr>
+		<tr>
+			<td>Enter student name </td>
+			<td><input type="text" id="name" placeholder="Student name"></td>
+		</tr>
+		<tr>
+			<td>Enter font size </td>
+			<td><input type="text" id="fontSize" placeholder="Font size"></td>
+		</tr>
+		<tr>
+			<td>Enter text color </td>
+			<td><input type="text" id="textColor" placeholder="Text color"></input></td>
+		</tr>
+		<tr>
+			<td>Enter background color </td>
+			<td><input type="text" id="bgColor" placeholder="Background color"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="showInfo()">Display student info</button></td>
+		</tr>
+	</table>
+	
+	
+	<!-- <input type="text" id="number" placeholder="Student number">Enter student number</input>
+	<br/><br/>
+	<input type="text" id="name" placeholder="Student name">Enter student name</input>
+	<br/><br/>	
+	<input type="text" id="fontSize" placeholder="Font size">Enter font size</input>
+	<br/><br/>	
+	<input type="text" id="textColor" placeholder="Text color">Enter text color</input>
+	<br/><br/>	
+	<input type="text" id="bgColor" placeholder="Background color">Enter background color</input>
+	<br><br>
+	<button onclick="showInfo()">Display student info</button>
+	<br><br> -->
+	<div id="result"></div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>LabExQ1</title>
+	<style>
+	  h1{
+	    text-align:center;
+		padding:10px;
+	  }
+	  
+	  h1#heading:hover{
+		transform:scale(2);
+	  }
+	</style>
+	
+	<script>
+	function changeStyle(colorValue)
+	{
+	  //get the heading element
+	  var headingElement=document.getElementById("heading");
+
+      //change color of the heading	  
+	  headingElement.style.color=colorValue;
+	}
+	</script>
+  </head>
+  <body>
+    <h1 id="heading" style="color:blue;">University of Wollongong</h1>
+	<button onclick="changeStyle('green')">Green</button>
+	<button onclick="changeStyle('orange')">Orange</button>
+	<button onclick="changeStyle('blue')">Blue</button>
+  </body>
+    
+</html>
+
+
+    
