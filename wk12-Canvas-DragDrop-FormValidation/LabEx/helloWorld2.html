@@ -1,0 +1,102 @@
+
+<html>
+    <head>
+        <title>Drag and Drop example</title>
+
+        <style>
+            .orangeWords {
+                color: orange;
+                font-size: 50px;
+            }
+
+            .redWords {
+                color: red;
+                font-size: 50px;
+            }
+        </style>
+
+        <script>
+
+            function dragStart(event){
+                console.log("i am dragging");
+
+                // get drag id
+                var dragId = event.target.id;
+                console.log("dragId = " + dragId);
+
+                // store drag id into dataTransfer
+                event.dataTransfer.setData("dragId", dragId);
+            }
+
+            function drop(event){
+                console.log("i am dropping");
+
+                // get the drop id
+                var dropId = event.target.id;
+                console.log("dropId = " + dropId);
+
+                // retrieve the drag id
+                var dragId = event.dataTransfer.getData("dragId");
+                console.log("dragId = " + dragId);
+
+                // main logic????
+                var correctFlag = false;
+
+                if(dragId=="hello" && dropId=="world"){
+                    correctFlag = true;
+                }else if(dragId=="green" && dropId=="frog"){
+                    correctFlag = true;
+                }else if(dragId=="blue" && dropId=="moon"){
+                    correctFlag = true;
+                }else if(dragId=="naughty" && dropId=="cat"){
+                    correctFlag = true;
+                }else if(dragId=="noisy" && dropId=="dog"){
+                    correctFlag = true;
+                }
+
+                console.log("correctFlag = " + correctFlag);
+
+                var message = "";
+                if(correctFlag){
+                    message = dragId + " " + dropId + " &#x2705;"; // green tick code
+                }else{
+                    message = dragId + " " + dropId + " &#10060;";
+                }
+
+                var displayDiv = document.getElementById("messageHolder");
+                displayDiv.innerHTML = message;
+            }
+
+            function dragOver(event){
+                event.preventDefault();
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <div class="orangeWords">
+          <span id="hello" draggable="true" onDragStart="dragStart(event)">hello</span>
+          <span id="green" draggable="true" onDragStart="dragStart(event)">green</span>
+          <span id="blue" draggable="true" onDragStart="dragStart(event)">blue</span>
+          <span id="naughty" draggable="true" onDragStart="dragStart(event)">naughty</span>
+          <span id="noisy" draggable="true" onDragStart="dragStart(event)">noisy</span>
+        </div>
+        <br /><br />
+
+        <div class="redWords">
+            <span id="frog" onDrop="drop(event)" onDragOver="dragOver(event)">frog</span>
+            <span id="cat" onDrop="drop(event)" onDragOver="dragOver(event)">cat</span>
+            <span id="world" onDrop="drop(event)" onDragOver="dragOver(event)">world</span>
+            <span id="dog" onDrop="drop(event)" onDragOver="dragOver(event)">dog</span>
+            <span id="moon" onDrop="drop(event)" onDragOver="dragOver(event)">moon</span>
+        </div>
+        <br /><br />
+
+        <div id="messageHolder">
+
+        </div>
+        
+
+    </body>
+</html>

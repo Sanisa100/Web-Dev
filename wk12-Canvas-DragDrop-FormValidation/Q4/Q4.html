@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+    <script>
+        var x = 1;
+        var y = 2;
+        var result = x + y;
+        
+        // set up a random value for math problem x + y
+        function setupMath()
+        {
+          x = Math.floor(Math.random()*10);
+          y = Math.floor(Math.random()*10);
+          result = x + y;
+          var mathEquation = x + " + " + y + " = ";
+          
+          var mathSpan = document.getElementById("mathHolder");
+          mathSpan.innerHTML = "Prove that you are not a robot: " + mathEquation;
+        }
+        
+        function validateLibraryForm()
+        {
+          // get user answer to math problem
+          var mathResultTf = document.getElementById("mathResult");
+          var userAnswer = Number(mathResultTf.value);
+          
+          // check user answer correct or not
+          if(userAnswer != result)
+          {
+            var mathMessageSpan = document.getElementById("mathMessageHolder");
+            mathMessageSpan.innerHTML = "<font color='red'>Wrong!</font>";
+            return false;
+          }
+          return true;
+        }
+      </script>
+</head>
+<body onLoad="setupMath()">
+
+    <h1>Whosville library book search</h1>
+
+    <form action="http://library.whosville/bsearch" method="get"
+          onSubmit="return validateLibraryForm()">
+
+      <table>
+        <tr>
+          <td>
+            Author name:
+          </td>
+
+          <td>
+            <input type="text" size="30" name="author" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Publication year:
+          </td>
+
+          <td>
+            <input type="text" size="30" name="year" />
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            Subject:
+          </td>
+
+          <td>
+            <input type="checkbox" name="sub" value="mth" /> Mathematics
+            <br />
+
+            <input type="checkbox" name="sub" value="cs" /> Computer Science
+            <br />
+
+            <input type="checkbox" name="sub" value="bio" /> Biology
+            <br />
+
+            <input type="checkbox" name="sub" value="phy" /> Physics
+            <br />
+
+            <input type="checkbox" name="sub" value="chem" /> Chemistry
+          </td>
+        </tr>
+        
+        <tr>
+          <td colspan="2">
+            <span id="mathHolder"></span>
+            <input type="text" size="5" id="mathResult" />
+            <span id="mathMessageHolder"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          
+          <td>
+            <input type="submit" value="Search" />
+
+            <input type="reset" value="Clear" />
+          </td>
+        </tr>
+      </table>     
+    </form>
+  </body>
+</html>
