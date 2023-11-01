@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeAjaxQuery() {
+            // create an XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+            // create a handler for the readyState change
+            xhttp.onreadystatechange = function () {
+                readyStateChangeHandler(xhttp);
+            };
+
+            // making query by async call
+            xhttp.open("GET", "question2.json", true);
+            xhttp.send();
+            
+            function readyStateChangeHandler(xhttp) {
+                if (xhttp.readyState == XMLHttpRequest.DONE) {
+                    if (xhttp.status == 200) {
+                        // status = 200 means OK
+                        handleStatusSuccess(xhttp);
+                    }
+                    else {
+                        // status is NOT OK
+                        console.log(xhttp.status, xhttp.statusText);
+                    }
+                }
+            }
+
+            function handleStatusSuccess(xhttp) {
+                var jsonText = xhttp.responseText;
+                // parse the json into an object
+                var obj = JSON.parse(jsonText);
+                // display the object on the page
+                display(obj);
+            }
+              function display(obj) {
+                var html = '';
+
+                html += "<h1>Login Report " + obj.date + "</h1><br/>"
+                html += "<b>Device name: "+ obj.deviceName + "</b><br/><br/>" 
+                
+                for(var i = 0; i < obj.users.length; i++) {
+                    html += "<b>Username: "+ obj.users[i].username + "</b><br/>" 
+                    html += "<b>Name: "+ obj.users[i].name + "</b><br/>" 
+                    html += "<b>Group: "+ obj.users[i].group + "</b><br/>"
+                    html += '<b>Login: </b><br/>'
+                    html += '<ul>'
+                    for(var j = 0; j < obj.users[i].login.length; j++) {
+                        html += "<li>" + obj.users[i].login[j].timeStamp+ ": " + obj.users[i].login[j].status  + "</li> "
+                    }
+                    html += '</ul>'
+                }
+
+                var display = document.getElementById('showResult');
+
+                display.innerHTML = html;
+              }  
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onclick="makeAjaxQuery()">Get Login Report</button>
+    <div id="showResult"></div>
+</body>
+
+</html>

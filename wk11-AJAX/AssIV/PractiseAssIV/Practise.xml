@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<record>
+  <date>2022/02/15</date>
+  <deviceName>toronto</deviceName>
+    <user>
+      <userName>aw123</userName>
+      <name>Anna Wilson</name>
+      <group>Student</group>
+
+      <login>
+        <timing>2022/01/30 04:50:50</timing>
+        <result>success</result>
+        <timing>2022/02/01 01:30:56</timing>
+        <result>success</result>
+        <timing>2022/02/01 02:00:10</timing>
+        <result>fail</result>
+      </login>
+    </user>
+
+    <user>
+      <userName>jasonm</userName>
+      <name>Jason Miles</name>
+      <group>Staff</group>
+
+      <login>
+        <timing>2022/01/29 15:04:22</timing>
+        <result>fail</result>
+        <timing>2022/02/01 14:55:04</timing>
+        <result>success</result>
+      </login>
+    </user>
+
+    <user>
+      <userName>jessij</userName>
+      <name>Jessie Jay</name>
+      <group>Staff</group>
+
+      <login>
+        <timing>2022/01/27 15:15:15</timing>
+        <result>success</result>
+        <timing>2022/02/29 10:15:24</timing>
+        <result>fail</result>
+      </login>
+    </user>
+
+</record>

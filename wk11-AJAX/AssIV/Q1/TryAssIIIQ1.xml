@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+    <date>2022/02/15</date>
+    <deviceName>toronto</deviceName>
+        <user>
+            <userName>aw123</userName>
+            <name>Anna Wilson</name>
+            <group>Student</group>
+            <login>
+                <timing>2022/01/30 04:50:50</timing>
+                <status>success</status>
+                <timing>2022/02/01 01:30:56</timing>
+                <status>success</status>
+                <timing>2022/02/01 02:00:10</timing>
+                <status>fail</status>
+            </login>
+            
+        </user>
+
+         <user>
+            <userName>jasonm</userName>
+            <name>Jason Miles</name>
+            <group>Staff</group>
+            <login>
+                <timing>2022/01/29 15:04:22</timing>
+                <status>fail</status>
+                <timing>2022/02/01 14:55:04</timing>
+                <status>success</status>
+            </login>
+        </user>
+
+        <user>
+            <userName>jj987</userName>
+            <name>Jessi Jay</name>
+            <group>Student</group>
+            <login>
+                <timing>2022/01/28 05:40:40</timing>
+                <status>success</status>
+                <timing>2022/02/02 03:30:46</timing>
+                <status>success</status>
+            </login>  
+        </user> 
+</report>
